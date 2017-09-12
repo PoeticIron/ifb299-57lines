@@ -1,11 +1,3 @@
-
-
-<!DOCTYPE html>
-<html>
-<head>
-<title>Smart City</title>
- 
-<style>
 body {
   background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/12/New-York-Wallpaper-Background-2.jpg");
   background-size: cover;
@@ -18,7 +10,11 @@ h1 {
 	left: 360px;
 	top: 70px;
 } 
+label {
 
+	color:white;
+	font-size: 24px;
+}
 h2 {
 	color: white;
 	font-family: Verdana;
@@ -43,7 +39,7 @@ h2 {
 }
 
 /* Full-width inputs */
-input[type=text], input[type=password] {
+input{
     width: 300px;
     padding: 12px 20px;
     border: 1px solid #ccc;
@@ -95,32 +91,3 @@ button:hover {
     top: 250px;
 }
  
-</style>
- 
-</head>
- 
-<body>
-
-<div class=transparentbox></div>
-<h1>Login to SmartCity</h1>
-<h2>Forgot Your Password?</h2>
-
-<div class="container1">
-  <input type="text" placeholder="Enter Email" name="uname">
-</div>
-
-<div class="container2">
-  <input type="password" placeholder="Enter Password" name="psw">
-</div>
-
-<div class="login">
-  <button type="login">Login</button>
-</div>
-
-<div class="register">
-  <button onclick="window.location='index.html';" type="register">Register</button>
-</div>
-
-</body>
-</html>
-
