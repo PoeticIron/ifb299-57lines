@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/auth/static/mainStyle.css">
-<body>
+<body><div class="content">
 <form action="register" method="post">
     {% csrf_token %}
     {{ form.as_p }}
