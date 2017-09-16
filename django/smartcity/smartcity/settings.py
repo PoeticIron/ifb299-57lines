@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'testproj.urls'
+ROOT_URLCONF = 'smartcity.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'testproj.wsgi.application'
+WSGI_APPLICATION = 'smartcity.wsgi.application'
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__))
 
 
