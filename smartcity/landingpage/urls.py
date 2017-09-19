@@ -21,6 +21,7 @@ from dbview.views import DbPageView
 
 urlpatterns = [
     url(r'^$', views.LoginPageView.as_view()),
+	url(r'^login', views.login, name='login'),
     url(r'^registerpage/$', RegisterPageView.as_view()),
     url(r'^mainpage/$', MainPageView.as_view()),
     url(r'^dbview/$', DbPageView.as_view()),

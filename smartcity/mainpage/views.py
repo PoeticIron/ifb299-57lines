@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
+from django.http import HttpResponse, HttpResponseRedirect
 
 from dbview.models import Colleges
 
@@ -8,6 +9,7 @@ class MainPageView(TemplateView):
     def get(self, request, **kwargs):
         colleges = Colleges.objects.all()
         return render(request, 'mainpage.html', {'colleges': colleges})
-            
+		
+
         
 
