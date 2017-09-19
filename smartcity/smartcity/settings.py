@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'landingpage',
     'registerpage',
     'mainpage',
+    'dbview',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -83,10 +84,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': 'rango.db',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
     }
 }
 
