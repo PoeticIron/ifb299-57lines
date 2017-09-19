@@ -17,9 +17,11 @@ from django.conf.urls import include, url
 from landingpage import views
 from registerpage.views import RegisterPageView
 from mainpage.views import MainPageView
+from dbview.views import DbPageView
 
 urlpatterns = [
     url(r'^$', views.LoginPageView.as_view()),
     url(r'^registerpage/$', RegisterPageView.as_view()),
     url(r'^mainpage/$', MainPageView.as_view()),
+    url(r'^dbview/$', DbPageView.as_view()),
 ]
