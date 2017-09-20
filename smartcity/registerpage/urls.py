@@ -18,5 +18,4 @@ from registerpage import views
 
 urlpatterns = [
     url(r'^$', views.RegisterPageView.as_view()),
-	url(r'^register', views.register, name='register'),
 ]

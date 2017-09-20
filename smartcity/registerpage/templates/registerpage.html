@@ -12,16 +12,20 @@ body {
 h1 {
   color: white;
   font-family: Verdana;
-  margin-left: 7%;
-  margin-top: 5%;
+  position: fixed;
+  left: 360px;
+  top: 70px;
 } 
 
 .transparentbox {
-  	margin-left:15%;
-  	margin-top: 50px;
-    width:70%;
+  	position: fixed;
+  	left:300px;
+  	top: 50px;
+    width:800px;
     height:630px;
-    background-color: rgba(0,0,0,0.6);
+    background-color: black;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
     z-index: -1;
     border-radius: 25px;
 }
@@ -36,41 +40,45 @@ input[type=text], input[type=password] {
 
 /* Add padding to containers */
 .container1 {
-    margin-top: 2%;
-	margin-left:12%
+    position: fixed;
+    left: 380px;
+    top: 200px;
 }
-label{
-  color: white;
-  font-family: Verdana;
-  margin-left:7%;
-  }
-p{
-	margin-top:4%;
-	}
-input{
-	float:right;
-	width: 300px;
-	height: 40px;
-	margin-right:7%;
-    padding: 12px 20px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-	}
+
+/* Add padding to containers */
+.container2 {
+    position: fixed;
+    left: 380px;
+    top: 250px;
+}
+
+/* Add padding to containers */
+.container3 {
+    position: fixed;
+    left: 380px;
+    top: 300px;
+}
 
 </style>
 
 </head>
 
 <body>
-<div class=transparentbox>
 <h1>Register with SmartCity</h1>
 
+<div class=transparentbox></div>
 
-<form action="/register" name="RegForm" method="post">
-{% csrf_token %}
-{{ form.as_p }}
-<p>
-<input type="submit" value="Register Now"></p>
-</form>
-</div></body>
+<div class="container1">
+  <input type="text" placeholder="First Name" name="uname">
+</div>
+
+<div class="container2">
+  <input type="password" placeholder="Last Name" name="psw">
+</div>
+
+<div class="container3">
+  <input type="text" placeholder="Email" name="uname">
+</div>
+
+</body>
 </html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart City</title>
+
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>College Name</th>
+    <th>Address</th>
+    <th>Departments</th>
+    <th>Email</th>
+  </tr>
+  {% for library in libraries %}
+  <tr>
+    <td>{{ library.library_name }}</td>
+    <td>{{ library.address }}</td>
+    <td>{{ library.phone_number }}</td>
+    <td>{{ library.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+
+</body>
+</html>

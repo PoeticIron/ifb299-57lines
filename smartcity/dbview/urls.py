@@ -17,5 +17,6 @@ from django.conf.urls import include, url
 from dbview import views
 
 urlpatterns = [
-    url(r'^$', views.DbPageView.as_view()),
+    url(r'^$', views.DbCollegeView.as_view()),
+    url(r'^$', views.DbLibraryView.as_view()),
 ]
