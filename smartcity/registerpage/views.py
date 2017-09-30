@@ -24,4 +24,4 @@ def register(request):
 			return HttpResponseRedirect('/mainpage')
 	else:
 		form=RegForm()
-	return render(request, 'name.html', {'form':form})
+	return render(request, 'registerpage.html', {'form':form})

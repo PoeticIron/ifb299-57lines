@@ -18,4 +18,7 @@ from mainpage import views
 
 urlpatterns = [
     url(r'^$', views.MainPageView.as_view()),
+	url(r'^', include('landingpage.urls', namespace='mainpage')),
+    url(r'^', include('registerpage.urls')),
+    url(r'^', include('dbview.urls')),
 ]
