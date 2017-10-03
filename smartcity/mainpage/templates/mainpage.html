@@ -5,7 +5,7 @@
 
 <style>
 body {
-    background-image: url("");
+    background-image: url("http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg");
 	background-size: cover;
     height: 1200px;
     overflow: scroll;
@@ -19,8 +19,6 @@ h2 {
 }
 
 img[type=city] {
-    position: absolute;
-    top: 50px;
     height: 400px;
     width: 1500px;
     left: 0px;
@@ -29,8 +27,6 @@ img[type=city] {
 }
 
 img[type=wood] {
-    position: absolute;
-    top: 450px;
     height: 750px;
     width: 1500px;
     left: 0px;
@@ -39,10 +35,11 @@ img[type=wood] {
 }
 
 img[type=university] {
-    position: absolute;
-    top: 600px;
-    left: 100px;
-    width: 150px;
+	display:block;
+	margin:auto;
+	margin-top:20%;
+    width: 200px;
+	text-align:center;
     overflow: hidden;
 }
 
@@ -95,18 +92,15 @@ img[type=mall] {
 }
 
 .box1 {
-  	position: absolute;
-  	left:5%;
-  	top: 500px;
-    width:200px;
-    height:300px;
+	display:inline-block;
+	height:250px;
+	margin-left:5%;
     background-color: white;
     z-index: -1;
+	width:200px;
 }
 
 .boxheader1 {
-    position: absolute;
-    left:5%;
     top: 500px;
     width:200px;
     height:50px;
@@ -114,9 +108,8 @@ img[type=mall] {
 }
 
 .box2 {
-    position: absolute;
-    left:25%;
-    top: 500px;
+	display:inline-block;
+	margin-left:5%;
     width:200px;
     height:300px;
     background-color: white;
@@ -124,8 +117,6 @@ img[type=mall] {
 }
 
 .boxheader2 {
-    position: absolute;
-    left:25%;
     top: 500px;
     width:200px;
     height:50px;
@@ -133,9 +124,7 @@ img[type=mall] {
 }
 
 .box3 {
-    position: absolute;
-    left: 45%;
-    top: 500px;
+    margin-left:5%;
     width:200px;
     height:300px;
     background-color: white;
@@ -152,8 +141,7 @@ img[type=mall] {
 }
 
 .box4 {
-    position: absolute;
-    left: 65%;
+    margin-left:5%;
     top: 500px;
     width:200px;
     height:300px;
@@ -229,8 +217,6 @@ img[type=mall] {
 
 button[type=colleges] {
     position: absolute;
-    left:5%;
-    top: 500px;
     width:200px;
     text-decoration: none;
     color: white;
@@ -346,81 +332,45 @@ button[type=mall] {
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
-<div class=box1></div>
-
-<div class=boxheader1></div>
-
-<div class=box2></div>
-
-<div class=boxheader2></div>
-
-<div class=box3></div>
-
-<div class=boxheader3></div>
-
-<div class=box4></div>
-
-<div class=boxheader4></div>
-
-<div class=box5></div>
-
-<div class=boxheader5></div>
-
-<div class=box6></div>
-
-<div class=boxheader6></div>
-
-<div class=box7></div>
-
-<div class=boxheader7></div>
-
-<div class=navbar></div>
-
 <img type="city"; src="https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1">
 
-<img type="wood"; src="http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg">
-
-<img type="university"; src="https://icon-icons.com/icons2/510/PNG/512/university_icon-icons.com_49967.png">
-
-<img type="library"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/9280-200.png">
-
-<img type="restaurant"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/11637-200.png">
-
-<img type="park"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/12246-200.png">
-
-<img type="zoo"; src="https://cdn3.iconfinder.com/data/icons/nature-tab-bar/512/zoo-512.png">
-
-<img type="museum"; src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Museum-icon.png">
-
-<img type="mall"; src="https://cdn.iconscout.com/public/images/icon/premium/png-512/mall-department-store-shopping-building-345bef5a68fc159c-512x512.png">
-
-<div class="colleges">
+<br>
+<div class=box1>
   <button onclick="window.location.href='/colleges';" type="colleges">Colleges</button>
+  <img type="university"; src="https://icon-icons.com/icons2/510/PNG/512/university_icon-icons.com_49967.png">
 </div>
 
-<div class="libraries">
-  <button onclick="window.location.href='/libraries';" type="libraries">Libraries</button>
+<div class=box1>
+  <button onclick="window.location.href='/libraries';" type="colleges">Libraries</button>
+  <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/9280-200.png">
 </div>
 
-<div class="restaurant">
-  <button onclick="window.location.href='/restaurant';" type="restaurant">Restaurants</button>
+<div class=box1>
+  <button onclick="window.location.href='/restaurant';" type="colleges">Restaurants</button>
+  <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/11637-200.png">
 </div>
 
-<div class="park">
-  <button onclick="window.location.href='/park';" type="park">Park</button>
+<div class=box1>
+  <button onclick="window.location.href='/park';" type="colleges">Parks</button>
+  <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/12246-200.png">
+</div>
+<br>
+
+<div class=box1>
+  <button onclick="window.location.href='/zoo';" type="colleges">Zoos</button>
+  <img type="university"; src="https://cdn3.iconfinder.com/data/icons/nature-tab-bar/512/zoo-512.png">
 </div>
 
-<div class="zoo">
-  <button onclick="window.location.href='/zoo';" type="zoo">Zoo</button>
+<div class=box1>
+  <button onclick="window.location.href='/museum';" type="colleges">Museums</button>
+  <img type="university"; src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Museum-icon.png">
+</div>
+<div class=box1>
+  <button onclick="window.location.href='/mall';" type="colleges">Malls</button>
+  <img type="university"; src="https://cdn.iconscout.com/public/images/icon/premium/png-512/mall-department-store-shopping-building-345bef5a68fc159c-512x512.png">
 </div>
 
-<div class="museum">
-  <button onclick="window.location.href='/museum';" type="museum">Museum</button>
-</div>
 
-<div class="mall">
-  <button onclick="window.location.href='/mall';" type="mall">Mall</button>
-</div>
 
 </body>
 </html>
