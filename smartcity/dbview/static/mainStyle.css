@@ -1,7 +1,10 @@
-body {
+/*Standard CSS for site-wide implementation */
+body{
+/*background image shared across pages unless explicitly overwritten */
   background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/12/New-York-Wallpaper-Background-2.jpg");
   background-size: cover;
 }
+/* 'content' div centers content and provides transparent background for easier viewing. */
 div.content{
 	position: center;
 	background-color: rgba(0.3,0.3,0.3,0.5);
@@ -11,6 +14,7 @@ div.content{
 div.content.background{
 		opacity: 0.4;
 		}
+/*tables are formatted with the content div in mind, with black borders and white font. */		
 table{
 	border: 3px solid black;
 	}
@@ -19,7 +23,7 @@ th,td{
 	color: white;
 	font-family:Verdana;
 	}
-
+/* Headers and labels also formatted with 'content' in mind, with high-contrast white font and large size, as well as consistent header placement. */
 h1 {
 	color: white;
 	font-family: Verdana;
@@ -27,11 +31,6 @@ h1 {
 	left: 360px;
 	top: 70px;
 } 
-label {
-
-	color:white;
-	font-size: 24px;
-}
 h2 {
 	color: white;
 	font-family: Verdana;
@@ -41,6 +40,11 @@ h2 {
 	font-size: 10px;
 	text-decoration: underline;
 } 
+label {
+	color:white;
+	font-size: 24px;
+}
+
 
 .transparentbox{
 	position: fixed;
@@ -55,7 +59,7 @@ h2 {
   	border-radius: 25px;
 }
 
-/* Full-width inputs */
+/* Standard input template allows for continuous sizing of inputs, and consistent style. */
 input{
     width: 300px;
     padding: 12px 20px;
@@ -63,7 +67,7 @@ input{
     box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
+/* Other input types are formatted specifically as needed. */
 button[type=login] {
     background-color: #4CAF50;
     color: white;
@@ -75,8 +79,6 @@ button[type=login] {
     left: 430px;
     top: 500px;
 }
-
-/* Set a style for all buttons */
 button[type=register] {
     background-color: orange;
     color: white;
@@ -89,19 +91,17 @@ button[type=register] {
     top: 570px;
 }
 
-/* Add a hover effect for buttons */
+/* Buttons are given a hover effect to provide responsiveness to user. */
 button:hover {
     opacity: 0.8;
 }
 
-/* Add padding to containers */
+/* Containers are formatted consistently.*/
 .container1 {
     position: fixed;
     left: 380px;
     top: 200px;
 }
-
-/* Add padding to containers */
 .container2 {
     position: fixed;
     left: 380px;

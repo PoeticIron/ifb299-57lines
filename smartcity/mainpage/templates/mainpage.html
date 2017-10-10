@@ -91,7 +91,7 @@ img[type=mall] {
     overflow: hidden;
 }
 
-.box1 {
+.contentbox {
 	display:inline-block;
 	height:250px;
 	margin-left:5%;
@@ -113,49 +113,80 @@ button[type=colleges] {
     font-size: 20px;
 
 }
-
+div.map{
+	width:90%;
+	height:30%;
+	margin-left:5%;
+	}
 
 </style>
-
+<!-- Leaflet CSS and JS inputs for map -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
 </head>
 
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
 <img type="city"; src="https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1">
+ <div id="map" class="map"></div>
+ <script>
+var map;
+var ajaxRequest;
+var plotlist;
+var plotlayers=[];
 
+function initmap() {
+	// set up the map
+	map = new L.Map('map');
+
+	// create the tile layer with correct attribution
+	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 12, attribution: osmAttrib});		
+
+	// start the map in South-East England
+	map.setView(new L.LatLng(-27.4698, 153.025),9);
+	map.addLayer(osm);
+}
+initmap();
+ </script>
 <br>
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/colleges';" type="colleges">Colleges</button>
   <img type="university"; src="https://icon-icons.com/icons2/510/PNG/512/university_icon-icons.com_49967.png">
 </div>
 
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/libraries';" type="colleges">Libraries</button>
   <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/9280-200.png">
 </div>
 
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/restaurant';" type="colleges">Restaurants</button>
   <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/11637-200.png">
 </div>
 
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/park';" type="colleges">Parks</button>
   <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/12246-200.png">
 </div>
 <br>
 
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/zoo';" type="colleges">Zoos</button>
   <img type="university"; src="https://cdn3.iconfinder.com/data/icons/nature-tab-bar/512/zoo-512.png">
 </div>
 
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/museum';" type="colleges">Museums</button>
   <img type="university"; src="http://icons.iconarchive.com/icons/iconsmind/outline/512/Museum-icon.png">
 </div>
-<div class=box1>
+<div class=contentbox>
   <button onclick="window.location.href='/mall';" type="colleges">Malls</button>
   <img type="university"; src="https://cdn.iconscout.com/public/images/icon/premium/png-512/mall-department-store-shopping-building-345bef5a68fc159c-512x512.png">
 </div>

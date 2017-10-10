@@ -11,6 +11,7 @@ def login(request):
 	if request.method == 'POST':
 		user = authenticate(username=request.POST.get("uname"), password=request.POST.get("psw"))
 		if user is not None:
+			login(request, user)
 			return HttpResponseRedirect('/mainpage')
 		else:
 			return HttpResponseRedirect('/')
