@@ -21,6 +21,8 @@ from dbview.views import *
 
 urlpatterns = [
     url(r'^$', views.LoginPageView.as_view()),
+	url(r'^login', views.logon),
+	url(r'^logout', views.logoff),
     url(r'^registerpage/$', RegisterPageView.as_view()),
     url(r'^mainpage/$', MainPageView.as_view()),
     url(r'^colleges/$', DbCollegeView.as_view()),

@@ -119,9 +119,11 @@ input.searchTerm{
 	<div class="navbar">
 		<ul>
 			<li>
-				<a href="/">
-					Login
-				</a>
+				{% if user.is_authenticated %}
+    <a>Welcome, {{ user.username }}. Thanks for logging in.</a>
+{% else %}
+    <a href="/">Welcome, new user. Please log in.</a>
+{% endif %}
 			</li>
 			<li>
 				<a href="/mainpage">
@@ -149,6 +151,11 @@ input.searchTerm{
 					  <a href="#">Melbourne</a>
 					</div>
 			</li>
+			{% if user.is_authenticated %}
+			<li>
+				<a href="/logout"> Log Out </a>
+			</li>
+			{% endif %}
 			<div class="searchbar">
 				<li style="float:right">
 					<input class="searchTerm" type="text" name="search">
