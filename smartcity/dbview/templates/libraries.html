@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Smart City</title>
-
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/mainStyle.css">
 <style>
 
 </style>
@@ -10,12 +10,13 @@
 </head>
 
 <body>
-
+{% load staticfiles%}
+{%include 'navbar.html'%}
 <table style="width:100%">
   <tr>
     <th>College Name</th>
     <th>Address</th>
-    <th>Departments</th>
+    <th>Phone Number</th>
     <th>Email</th>
   </tr>
   {% for library in libraries %}

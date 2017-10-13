@@ -24,7 +24,24 @@ img[type=city] {
     overflow: hidden;
     z-index: -2
 }
-
+div.city{
+    background-image: url(https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1);
+	height:400px;
+	margin-top:-3px;
+	width:90%;
+	margin-left:5%;
+  background-size: cover;
+}
+h3{
+	position:relative;
+	top:40px;
+    color:black;
+	text-align:center;
+	font-size:600%;
+	font-family:Verdana;
+	vertical-align:center;
+	margin-top:0%;
+	}
 img[type=wood] {
     height: 750px;
     width: 1500px;
@@ -36,7 +53,7 @@ img[type=wood] {
 img[type=university] {
 	display:block;
 	margin:auto;
-	margin-top:20%;
+	margin-top:22%;
     width: 200px;
 	text-align:center;
     overflow: hidden;
@@ -47,7 +64,7 @@ img[type=university] {
 	display:inline-block;
 	height:250px;
 	margin-left:5%;
-    background-color: white;
+    background-color: #EDEDED;
     z-index: -1;
 	width:200px;
 }
@@ -84,10 +101,12 @@ div.map{
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
-<img type="city"; src="https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1">
+<div class="city">
+<h3>Welcome to SmartCity </h3></div>
+ <div id="map" class="map"></div>
+
 <div class="content">
 
- <div id="map" class="map"></div>
  <script>
 var map;
 var ajaxRequest;
@@ -101,10 +120,10 @@ function initmap() {
 	// create the tile layer with correct attribution
 	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
-	var osm = new L.TileLayer(osmUrl, {minZoom: 1, maxZoom: 12, attribution: osmAttrib});		
+	var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 16, attribution: osmAttrib});		
 
 	// start the map in South-East England
-	map.setView(new L.LatLng(-27.4698, 153.025),9);
+	map.setView(new L.LatLng(-27.4772, 153.0278),9);
 	map.addLayer(osm);
 }
 initmap();
@@ -112,12 +131,12 @@ initmap();
 <br>
 <div class=contentbox>
   <button onclick="window.location.href='/colleges';" type="colleges">Colleges</button>
-  <img type="university"; src="https://icon-icons.com/icons2/510/PNG/512/university_icon-icons.com_49967.png">
+  <img type="university"; src="https://cdn.discordapp.com/attachments/349764760818155520/368229296646389762/College_Logo.jpg">
 </div>
 
 <div class=contentbox>
   <button onclick="window.location.href='/libraries';" type="colleges">Libraries</button>
-  <img type="university"; src="https://d30y9cdsu7xlg0.cloudfront.net/png/9280-200.png">
+  <img type="university"; src="https://cdn.discordapp.com/attachments/349764760818155520/368233750540058624/Libraries_Logo.jpg">
 </div>
 
 <div class=contentbox>
