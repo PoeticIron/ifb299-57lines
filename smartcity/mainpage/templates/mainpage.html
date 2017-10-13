@@ -2,10 +2,9 @@
 <html>
 <head>
 <title>Smart City</title>
-
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/mainStyle.css">
 <style>
 body {
-    background-image: url("http://3.bp.blogspot.com/-3UIjuTrbAI8/Uihk5uaH_lI/AAAAAAAAAuk/gcn5XlQ9kyI/s640/Top+10+best+Simple+Awesome+Background+Images+for+Your+Website+or+Blog2.jpg");
 	background-size: cover;
     height: 1200px;
     overflow: scroll;
@@ -43,53 +42,6 @@ img[type=university] {
     overflow: hidden;
 }
 
-img[type=library] {
-    position: absolute;
-    top: 600px;
-    left: 375px;
-    width: 130px;
-    overflow: hidden;
-}
-
-img[type=restaurant] {
-    position: absolute;
-    top: 600px;
-    left: 640px;
-    width: 130px;
-    overflow: hidden;
-}
-
-img[type=park] {
-    position: absolute;
-    top: 600px;
-    left: 920px;
-    width: 130px;
-    overflow: hidden;
-}
-
-img[type=Zoo] {
-    position: absolute;
-    top: 600px;
-    left: 1170px;
-    width: 130px;
-    overflow: hidden;
-}
-
-img[type=museum] {
-    position: absolute;
-    top: 950px;
-    left: 510px;
-    width: 130px;
-    overflow: hidden;
-}
-
-img[type=mall] {
-    position: absolute;
-    top: 950px;
-    left: 780px;
-    width: 130px;
-    overflow: hidden;
-}
 
 .contentbox {
 	display:inline-block;
@@ -106,7 +58,7 @@ button[type=colleges] {
     text-decoration: none;
     color: white;
     font-family: Verdana;
-    background-color: green;
+    background-color: #3F3F5F;
     padding: 14px 20px;
     border: none;
     cursor: pointer;
@@ -133,6 +85,8 @@ div.map{
 {% load staticfiles%}
 {%include 'navbar.html'%}
 <img type="city"; src="https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1">
+<div class="content">
+
  <div id="map" class="map"></div>
  <script>
 var map;

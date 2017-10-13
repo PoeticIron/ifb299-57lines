@@ -1,7 +1,7 @@
 /*Standard CSS for site-wide implementation */
 body{
 /*background image shared across pages unless explicitly overwritten */
-  background-image: url("http://www.technocrazed.com/wp-content/uploads/2015/12/New-York-Wallpaper-Background-2.jpg");
+  background-image: url("https://cdn.discordapp.com/attachments/349764760818155520/364996460602720257/Brisbane-City-sunrise-image-2_2048x.png");
   background-size: cover;
 }
 /* 'content' div centers content and provides transparent background for easier viewing. */
@@ -24,13 +24,7 @@ th,td{
 	font-family:Verdana;
 	}
 /* Headers and labels also formatted with 'content' in mind, with high-contrast white font and large size, as well as consistent header placement. */
-h1 {
-	color: white;
-	font-family: Verdana;
-	position: fixed;
-	left: 360px;
-	top: 70px;
-} 
+
 h2 {
 	color: white;
 	font-family: Verdana;
@@ -46,18 +40,7 @@ label {
 }
 
 
-.transparentbox{
-	position: fixed;
-	left:330px;
-	top: 50px;
-    width:400px;
-    height:630px;
-  	background-color: black;
-  	opacity: 0.6;
-  	filter: alpha(opacity=60);
-  	z-index: -1;
-  	border-radius: 25px;
-}
+
 
 /* Standard input template allows for continuous sizing of inputs, and consistent style. */
 input{
