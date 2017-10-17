@@ -1,0 +1,28 @@
+from django.shortcuts import render
+from django.views.generic import UpdateView
+from .forms import UpdateForm
+from django.contrib.auth.models import User
+from django.http import HttpResponse, HttpResponseRedirect
+
+# Create your views here.
+class UpdatePageView(UpdateView):
+    template_name = 'updatepage.html'
+    form_class = UpdateForm
+    success_url = '/mainpage'
+    def update_details(request, pk=None):
+        form = UpdateForm(request.POST or None)
+        if request.method == 'POST':    
+            if form.is_valid():
+                form.save()
+                return redirect('/mainpage')
+        return render(request, 'updatepage.html', {'form':form})
+
+def update(request):
+	if request.method == 'POST':
+		form = UpdateForm(request.POST)
+		if form.is_valid():
+			form.save()
+			return redirect('/mainpage')
+	else:
+		form=UpdateForm()
+	return render(request, 'updatepage.html', {'form':form})
