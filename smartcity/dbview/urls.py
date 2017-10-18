@@ -22,4 +22,5 @@ from django.conf import settings
 urlpatterns = [
     url(r'^$', views.DbCollegeView.as_view()),
     url(r'^$', views.DbLibraryView.as_view()),
+	url('search', views.search),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

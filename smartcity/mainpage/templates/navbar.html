@@ -154,8 +154,11 @@ input.searchTerm{
 			{% endif %}
 			<div class="searchbar">
 				<li style="float:right">
-					<input class="searchTerm" type="text" name="search">
-					<button>Search</button>
+					<form action="/search" name="SearchForm" method="post">
+					{% csrf_token %}
+					<input class="searchTerm" type="text" name="term">
+					<input type="submit" value="Search">
+					</form>
 				</li>
 			</div>
 		</ul>

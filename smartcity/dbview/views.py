@@ -14,3 +14,10 @@ class DbLibraryView(TemplateView):
     def get(self, request, **kwargs):
         libraries = Libraries.objects.all()
         return render(request, 'libraries.html', {'libraries': libraries})
+		
+def search(request):
+    if request.method == 'POST':
+        term = request.POST.get("term")
+        colleges = Colleges.objects.filter(college_name__icontains=term)
+
+    return render(request, 'results.html', {'colleges': colleges, })
