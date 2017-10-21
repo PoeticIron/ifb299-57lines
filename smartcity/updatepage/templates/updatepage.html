@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart City</title>
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/mainStyle.css">
+<style>
+body {
+	background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-family: Verdana;
+  margin-left: 7%;
+  margin-top: 5%;
+} 
+
+.transparentbox {
+  	margin-left:15%;
+  	margin-top: 50px;
+    width:70%;
+    height:630px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: -1;
+    border-radius: 25px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 300px;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container1 {
+    margin-top: 2%;
+	margin-left:12%
+}
+label{
+  color: white;
+  font-family: Verdana;
+  margin-left:7%;
+  }
+p{
+	margin-top:4%;
+	}
+input{
+	float:right;
+	width: 300px;
+	height: 40px;
+	margin-right:7%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+{% load staticfiles%}
+{%include 'navbar.html'%}
+<div class=transparentbox>
+<h1>Update Your Account Details </h1>
+
+
+<form action="/update" name="UpdateForm" method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<p>
+<input type="submit" value="Update Details"></p>
+</form>
+<form action="/delete" name ="UpdateFrom" method="post">
+{% csrf_token %}
+<input type="hidden" name="user_id" value="{{user.id}}" />
+<input type="submit" value="Delete Account">
+</form>
+</div></body>
+</html>
