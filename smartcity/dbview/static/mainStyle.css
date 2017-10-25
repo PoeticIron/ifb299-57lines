@@ -10,6 +10,7 @@ div.content{
 	background-color: rgba(0.3,0.3,0.3,0.5);
 	margin-left: 10%;
 	margin-right:10%;
+	margin-top:4%;
 	}
 div.content.background{
 		opacity: 0.4;

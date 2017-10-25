@@ -19,5 +19,6 @@ def search(request):
     if request.method == 'POST':
         term = request.POST.get("term")
         colleges = Colleges.objects.filter(college_name__icontains=term)
+        libraries = Libraries.objects.filter(library_name__icontains=term)
 
-    return render(request, 'results.html', {'colleges': colleges, })
+    return render(request, 'results.html', {'colleges': colleges, 'libs': libraries })

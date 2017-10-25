@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^', include('registerpage.urls')),
 	url(r'^', include('landingpage.urls')),
     url(r'^', include('dbview.urls')),
+	url(r'^', include('updatepage.urls')),
 ]
