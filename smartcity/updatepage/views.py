@@ -26,3 +26,13 @@ def update(request):
 	else:
 		form=UpdateForm()
 	return render(request, 'updatepage.html', {'form':form})
+
+def delete(request):
+    if request.method == 'POST':
+        form = UpdateForm(request.POST)
+        detail = User.objects.all()
+        user_id = int(request.POST.get('user_id'))
+        users = User.objects.get(id=user_id)
+        users.delete()
+        return render(request, 'updatepage.html', {'form':form})
+        

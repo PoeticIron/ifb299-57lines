@@ -74,5 +74,10 @@ input{
 <p>
 <input type="submit" value="Update Details"></p>
 </form>
+<form action="/delete" name ="UpdateFrom" method="post">
+{% csrf_token %}
+<input type="hidden" name="user_id" value="{{user.id}}" />
+<input type="submit" value="Delete Account">
+</form>
 </div></body>
 </html>
