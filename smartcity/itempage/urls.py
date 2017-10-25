@@ -14,15 +14,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
-from django.conf import settings
-from django.conf.urls.static import static
+from itempage import views
 
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^', include('landingpage.urls')),
-    url(r'^', include('registerpage.urls')),
-    url(r'^', include('mainpage.urls')),
-    url(r'^', include('dbview.urls')),
-	url(r'^', include('itempage.urls')),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+	url(r'^itempage', views.itempageView.as_view(), name='itempage'),
+]

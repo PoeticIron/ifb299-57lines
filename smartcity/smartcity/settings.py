@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'registerpage',
     'mainpage',
     'dbview',
+	'itempage',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -88,7 +89,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'password',
         'DEFAULT-CHARACTER-SET': 'utf8',
-	    'HOST': '127.0.0.1',
+	    'HOST': 'jimmybot.xyz',
         'PORT': '3306',
     }
 }

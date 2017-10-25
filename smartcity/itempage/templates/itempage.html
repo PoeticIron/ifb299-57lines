@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart City</title>
+<link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
+<!-- Leaflet CSS and JS inputs for map -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
+   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+   crossorigin=""></script>
+</head>
+
+<body>
+{% load staticfiles%}
+{%include 'navbar.html'%}
+
+<div class="content">
+<h3>QUT </h3>
+<div id="mapSm" class="mapSm"></div>
+
+ <script>
+var map;
+var ajaxRequest;
+var plotlist;
+var plotlayers=[];
+
+function initmap() {
+	// set up the map
+	map = new L.Map('mapSm');
+
+	// create the tile layer with correct attribution
+	var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='Map data c <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
+	var osm = new L.TileLayer(osmUrl, {minZoom: 14, maxZoom: 16, attribution: osmAttrib});		
+
+	// start the map in South-East England
+	map.setView(new L.LatLng(-27.4772, 153.0278),14);
+	map.addLayer(osm);
+}
+initmap();
+var marker = L.marker([-27.4772, 153.0278],{ title:"QUT"}).addTo(map);
+ </script>
+ <div class="infobox">
+ <b>Address: </b> 2 George Street, Brisbane <br>
+ <b>Major Departments: </b> Science, Engineering <br>
+ <b>Contact Email: </b> askqut@qut.edu.au <br>
+ </div>
+ <div></div>

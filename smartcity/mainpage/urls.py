@@ -23,4 +23,6 @@ urlpatterns = [
 	url(r'^', include('landingpage.urls')),
     url(r'^', include('dbview.urls')),
 	url(r'^', include('updatepage.urls')),
+	url(r'^', include('itempage.urls')),
+
 ]

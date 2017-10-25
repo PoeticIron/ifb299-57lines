@@ -11,6 +11,7 @@ div.content{
 	margin-left: 10%;
 	margin-right:10%;
 	margin-top:4%;
+	height:80%;
 	}
 div.content.background{
 		opacity: 0.4;
@@ -93,7 +94,42 @@ button:hover {
 }
 input.searchbutton{
 padding:0px;
+width:75px;
 }
+h3{
+	position:relative;
+	top:40px;
+    color:black;
+	text-align:center;
+	font-size:600%;
+	font-family:Verdana;
+	vertical-align:center;
+	margin-top:0%;
+	-moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	}
+div.map{
+	width:90%;
+	height:30%;
+	margin-left:5%;
+	z-index:0;
+	}
+div.mapSm{
+	width:500px;
+	height:300px;
+	z-index:0;
+	float:left;
+}
+div.infobox{
+	float:right;
+	width:40%;
+	height:300px;
+	color:white;
+	font-size:200%;
+	font-family: Verdana;
+	
+	}
 
 
  
