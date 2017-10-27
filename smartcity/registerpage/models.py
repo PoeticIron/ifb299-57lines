@@ -10,7 +10,6 @@ class Profile(models.Model):
         (1, 'Student'),
         (2, 'Tourist'),
         (3, 'Businessperson'),
-        (4, 'Administrator'),
     )
     userType = models.IntegerField(
 		choices=user_Type,
