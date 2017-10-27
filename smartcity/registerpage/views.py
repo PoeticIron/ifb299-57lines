@@ -22,10 +22,11 @@ class RegisterPageView(TemplateView):
 def register(request):
 	if request.method == 'POST':
 		form = RegForm(request.POST)
-		typeForm = TypeForm(request.POST)
 		if form.is_valid():
 			fields = request.POST
 			user = User.objects.create_user(fields.get("username"),request.POST.get("email"),request.POST.get("password"))
+			typeForm = TypeForm(request.POST, instance=user.profile)
+			typeForm.save()
 			return HttpResponseRedirect('/mainpage')
 	else:
 		form=RegForm()
