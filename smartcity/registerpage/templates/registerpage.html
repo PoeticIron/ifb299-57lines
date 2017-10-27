@@ -71,6 +71,8 @@ input{
 <form action="/register" name="RegForm" method="post">
 {% csrf_token %}
 {{ form.as_p }}
+{{ typeForm.as_p }}
+
 <p>
 <input type="submit" value="Register Now"></p>
 </form>
