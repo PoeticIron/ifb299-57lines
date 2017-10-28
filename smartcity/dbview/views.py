@@ -33,6 +33,14 @@ class DbRestaurantView(TemplateView):
     def get(self, request, **kwargs):
         data =  Restaurants.objects.all()
         return render(request, 'libraries.html', {'libraries': data})
+class DbParksView(TemplateView):
+    def get(self, request, **kwargs):
+        data =  Parks.objects.all()
+        return render(request, 'libraries.html', {'libraries': data})
+class DbZoosView(TemplateView):
+    def get(self, request, **kwargs):
+        data =  Zoos.objects.all()
+        return render(request, 'libraries.html', {'libraries': data})
 def search(request):
     if request.method == 'POST':
         term = request.POST.get("term")

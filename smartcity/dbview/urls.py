@@ -22,6 +22,11 @@ from django.conf import settings
 urlpatterns = [
     url(r'^mall/$', views.DbMallView.as_view()),
 	url(r'^restaurant/$', views.DbRestaurantView.as_view()),
+	url(r'^restaurant/$', views.DbHotelView.as_view()),
+	url(r'^restaurant/$', views.DbIndustriesView.as_view()),
+	url(r'^restaurant/$', views.DbMuseumView.as_view()),
+	url(r'^restaurant/$', views.DbParksView.as_view()),
+	url(r'^restaurant/$', views.DbZoosView.as_view()),
     url(r'^$', views.DbCollegeView.as_view()),
     url(r'^$', views.DbLibraryView.as_view()),
 	url(r'^$', views.DbHotelView.as_view()),
