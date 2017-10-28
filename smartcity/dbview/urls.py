@@ -20,7 +20,12 @@ from django.contrib import admin
 from django.conf import settings
 
 urlpatterns = [
+    url(r'^mall/$', views.DbMallView.as_view()),
+	url(r'^restaurant/$', views.DbRestaurantView.as_view()),
     url(r'^$', views.DbCollegeView.as_view()),
     url(r'^$', views.DbLibraryView.as_view()),
+	url(r'^$', views.DbHotelView.as_view()),
+	url(r'^$', views.DbIndustriesView.as_view()),
+	url(r'^$', views.DbMallView.as_view()),
 	url('search', views.search),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
