@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart City</title>
+<link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
+<style>
+
+</style>
+
+</head>
+
+<body>
+
+<div class="content">
+
+{% load staticfiles%}
+{%include 'navbar.html'%}
+<table style="width:100%">
+  <tr>
+    <th>College Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for library in libraries %}
+  <tr>
+    <td>{{ library.name }}</td>
+    <td>{{ library.address }}</td>
+    <td>{{ library.phone_number }}</td>
+    <td>{{ library.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+
+</body>
+</html>
