@@ -17,4 +17,6 @@ def generate(request):
 		email = request.POST.get("email")
 		lat = request.POST.get("lat")
 		lon = request.POST.get("lon")
-	return render(request, 'itempage.html', {'address':address, 'name':name, 'phone':phone, 'email':email, 'lat':lat, 'lon':lon})
+		return render(request, 'itempage.html', {'address':address, 'name':name, 'phone':phone, 'email':email, 'lat':lat, 'lon':lon})
+	else:
+		return HttpResponseRedirect('/mainpage')
