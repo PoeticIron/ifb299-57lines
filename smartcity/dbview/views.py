@@ -7,8 +7,8 @@ from dbview.models import *
 
 class DbCollegeView(TemplateView):   
     def get(self, request, **kwargs):
-        colleges = Colleges.objects.all()
-        return render(request, 'colleges.html', {'colleges': colleges})
+        data = Colleges.objects.all()
+        return render(request, 'libraries.html', {'libraries': data})
 class DbLibraryView(TemplateView):   
     def get(self, request, **kwargs):
         libraries = Libraries.objects.all()

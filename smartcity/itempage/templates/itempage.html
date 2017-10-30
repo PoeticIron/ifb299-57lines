@@ -35,12 +35,11 @@ function initmap() {
 	var osmAttrib='Map data c <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 	var osm = new L.TileLayer(osmUrl, {minZoom: 14, maxZoom: 16, attribution: osmAttrib});		
 
-	// start the map in South-East England
-	map.setView(new L.LatLng(-27.4772, 153.0278),14);
+	map.setView(new L.LatLng({{lat}}, {{lon}}),14);
 	map.addLayer(osm);
 }
 initmap();
-var marker = L.marker([-27.4772, 153.0278],{ title:"QUT"}).addTo(map);
+var marker = L.marker([{{lat}}, {{lon}}],{ title:"QUT"}).addTo(map);
  </script>
  <div class="infobox">
  <b>Address: </b>{{address}} <br>

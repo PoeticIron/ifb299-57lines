@@ -7,18 +7,21 @@ class Colleges(models.Model):
     address = models.CharField(max_length=30)
     departments = models.CharField(max_length=30)
     email = models.EmailField()
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
 
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.departments, self.email)
+            self, self.name, self.address, self.departments, self.email, self.Lat, self.Lon)
 
 class Libraries(models.Model):
     name = models.CharField(max_length=30)
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -29,7 +32,8 @@ class Industries(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.CharField(max_length=30)
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -40,7 +44,8 @@ class Hotels(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -51,7 +56,8 @@ class Parks(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -62,7 +68,8 @@ class Zoos(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -73,7 +80,8 @@ class Museums(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.CharField(default = "-27.4772",max_length=30)
+    Lon = models.CharField(default = "153.0278",max_length=30)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -84,7 +92,8 @@ class Restaurants(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(
@@ -95,7 +104,8 @@ class Malls(models.Model):
     address = models.CharField(max_length=30)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.IntegerField(default = -27.4772,)
+    Lon = models.IntegerField(default = 153.0278,)
     def __unicode__(self):
 
         return "{0} {1} {2} {3} {4}".format(

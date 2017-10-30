@@ -4,7 +4,14 @@
 <title>Smart City</title>
 <link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
 <style>
-
+input.GoTo{
+	font-family: Verdana;
+	padding:0px;
+	width:80px;
+	background: rgba(0,0,0,0);
+	border:0px;
+	color:white;
+}
 </style>
 
 </head>
@@ -17,7 +24,7 @@
 {%include 'navbar.html'%}
 <table style="width:100%">
   <tr>
-    <th>College Name</th>
+    <th>Site Name</th>
     <th>Address</th>
     <th>Phone Number</th>
     <th>Email</th>
@@ -29,11 +36,15 @@
 	<input type="hidden" name="address" value = '{{library.address}} '/>
 	<input type="hidden" name="phone" value = '{{library.phone_number}} ' />
 	<input type="hidden" name="email" value = '{{library.email}} '/>
+	<input type="hidden" name="lat" value = '{{library.Lat}}' />
+	<input type="hidden" name="lon" value = '{{library.Lon}}' />
     <td>{{ library.name }}</td>
     <td>{{ library.address }}</td>
+	{% if library.phone_number %}
     <td>{{ library.phone_number }}</td>
+	{%endif%}
     <td>{{ library.email }}</td>
-	<td><input type="submit" value="Go To" />
+	<td><input type="submit" class="GoTo" value="View Page" />
   </form></tr>
   {% endfor %}
 </table> 

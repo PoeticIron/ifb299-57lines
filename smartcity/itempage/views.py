@@ -15,4 +15,6 @@ def generate(request):
 		address = request.POST.get("address")
 		phone = request.POST.get("phone")
 		email = request.POST.get("email")
-	return render(request, 'itempage.html', {'address':address, 'name':name, 'phone':phone, 'email':email})
+		lat = request.POST.get("lat")
+		lon = request.POST.get("lon")
+	return render(request, 'itempage.html', {'address':address, 'name':name, 'phone':phone, 'email':email, 'lat':lat, 'lon':lon})
