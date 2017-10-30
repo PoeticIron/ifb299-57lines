@@ -14,7 +14,9 @@ def logon(request):
 			login(request, user)
 			return HttpResponseRedirect('/mainpage')
 		else:
-			return HttpResponseRedirect('/')
+			return render(request, 'loginpage.html', {'errors':"No account was found with that username and password. Please try again."})
+	else:
+		return render(request, 'loginpage.html', context=None)
 def logoff(request):
 	logout(request)
 	return HttpResponseRedirect('/mainpage')

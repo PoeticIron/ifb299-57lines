@@ -16,19 +16,27 @@ class RegisterPageView(TemplateView):
                 return HttpResponseRedirect('/mainpage')
         else:
             form=RegForm()
-            typeForm = TypeForm(request.POST)
+            typeForm = TypeForm()
         return render(request, 'registerpage.html', {'form':form, 'typeForm': typeForm})
 
 def register(request):
+	errors = ""
+	typeForm = TypeForm()
 	if request.method == 'POST':
 		form = RegForm(request.POST)
 		if form.is_valid():
-			fields = request.POST
-			user = User.objects.create_user(fields.get("username"),request.POST.get("email"),request.POST.get("password"))
-			typeForm = TypeForm(request.POST, instance=user.profile)
-			typeForm.save()
-			return HttpResponseRedirect('/mainpage')
+			try:
+				fields = request.POST
+				user = User.objects.create_user(fields.get("username"),request.POST.get("email"),request.POST.get("password"))
+				typeForm = TypeForm(request.POST, instance=user.profile)
+				typeForm.save()
+				return HttpResponseRedirect('/mainpage')
+			except Exception as e:
+				pass
+				form = RegForm(request.POST)
+				typeForm = TypeForm(request.POST)
+				errors = e
 	else:
 		form=RegForm()
-		typeForm = TypeForm(request.POST)
-	return render(request, 'registerpage.html', {'form':form, 'typeForm': typeForm})
+		typeForm = TypeForm()
+	return render(request, 'registerpage.html', {'form':form, 'typeForm': typeForm, 'errors' : errors})

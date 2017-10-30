@@ -41,7 +41,13 @@ h2 {
     z-index: -1;
     border-radius: 25px;
 }
-
+div.errors{
+    position: fixed;
+	color:red;
+	top:140px;
+	left:350px;
+	width:400px;
+}
 /* Full-width inputs */
 input[type=text], input[type=password] {
     width: 300px;
@@ -104,6 +110,14 @@ button:hover {
 {%include 'navbar.html'%}
 <div class=transparentbox></div>
 <h1>Login to SmartCity</h1>
+{% with errors as errorlist %}
+{% if errorlist != "" %}
+<div class="errors">
+{{errors}}
+</div>
+{%endif%}
+{% endwith %}
+
 <h2>Forgot Your Password?</h2>
 <form action="login" method="post">
 {% csrf_token %}

@@ -15,10 +15,17 @@ class RegForm(forms.Form):
 		lastname = forms.CharField(max_length=100)
 		email = forms.EmailField()
 		password = forms.CharField(widget=forms.PasswordInput)
-		Confirm_password = forms.CharField(widget=forms.PasswordInput)
+		confPassword = forms.CharField(widget=forms.PasswordInput)
 		widgets = {
 			'password': forms.PasswordInput(),
 		}
+		def clean(self):
+			cleaned_data = super(RegForm, self).clean()
+			password = cleaned_data.get("password")
+			confpass = cleaned_data.get("confPassword")
+
+			if password != confpass:
+				raise forms.ValidationError("Please ensure that both Password and Confirm Password fields match.")
 
 class TypeForm(forms.ModelForm):
 	class Meta:
