@@ -25,7 +25,9 @@
   {% for library in libraries %}
   <tr><form method="post" action="/generate">
   	{% csrf_token %}
+	<input type="hidden" name="name" value = '{{library.name}} ' />
 	<input type="hidden" name="address" value = '{{library.address}} '/>
+	<input type="hidden" name="phone" value = '{{library.phone_number}} ' />
 	<input type="hidden" name="email" value = '{{library.email}} '/>
     <td>{{ library.name }}</td>
     <td>{{ library.address }}</td>
