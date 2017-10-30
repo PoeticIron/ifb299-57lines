@@ -23,12 +23,16 @@
     <th>Email</th>
   </tr>
   {% for library in libraries %}
-  <tr>
+  <tr><form method="post" action="/generate">
+  	{% csrf_token %}
+	<input type="hidden" name="address" value = '{{library.address}} '/>
+	<input type="hidden" name="email" value = '{{library.email}} '/>
     <td>{{ library.name }}</td>
     <td>{{ library.address }}</td>
     <td>{{ library.phone_number }}</td>
     <td>{{ library.email }}</td>
-  </tr>
+	<td><input type="submit" value="Go To" />
+  </form></tr>
   {% endfor %}
 </table> 
 

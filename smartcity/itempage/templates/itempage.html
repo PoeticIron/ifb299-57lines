@@ -17,7 +17,7 @@
 {%include 'navbar.html'%}
 
 <div class="content">
-<h3>QUT </h3>
+<h3>{{name}} </h3>
 <div id="mapSm" class="mapSm"></div>
 
  <script>
@@ -43,8 +43,8 @@ initmap();
 var marker = L.marker([-27.4772, 153.0278],{ title:"QUT"}).addTo(map);
  </script>
  <div class="infobox">
- <b>Address: </b> 2 George Street, Brisbane <br>
- <b>Major Departments: </b> Science, Engineering <br>
- <b>Contact Email: </b> askqut@qut.edu.au <br>
+ <b>Address: </b>{{address}} <br>
+ <b>Phone Number: </b> {{phone}} <br>
+ <b>Contact Email: </b> {{email}} <br>
  </div>
  <div></div>

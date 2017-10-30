@@ -18,4 +18,6 @@ from itempage import views
 
 urlpatterns = [
 	url(r'^itempage', views.itempageView.as_view(), name='itempage'),
+	url(r'^$', views.itempageView.as_view()),
+	url('generate', views.generate),
 ]
