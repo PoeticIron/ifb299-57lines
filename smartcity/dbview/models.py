@@ -3,111 +3,125 @@ from django.db import models
 # Create your models here.
 
 class Colleges(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
-    departments = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    departments = models.CharField(max_length=100)
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-    def __unicode__(self):
+    def __str__(self):
+        return self.name
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.departments, self.email, self.Lat, self.Lon)
+    class Meta:
+        verbose_name_plural = "Colleges"
 
 class Libraries(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Libraries"
 
 class Industries(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
-    phone_number = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
+    phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Industries"
 
 class Hotels(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Hotels"
 
 class Parks(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
 
-        return "{0} {1} {2} {3} {4}".format(
-           self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Parks"
 
 class Zoos(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Zoos"
 
 class Museums(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Museums"
 
 class Restaurants(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Restaurants"
 
 class Malls(models.Model):
-    name = models.CharField(max_length=30)
-    address = models.CharField(max_length=30)
+    name = models.CharField(max_length=100)
+    address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-    Lat = models.CharField(default = "-27.4772",max_length=30)
-    Lon = models.CharField(default = "153.0278",max_length=30)
-    def __unicode__(self):
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
 
-        return "{0} {1} {2} {3} {4}".format(
-            self, self.name, self.address, self.phone_number, self.email)
-    
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Malls"   
