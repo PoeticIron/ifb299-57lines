@@ -39,5 +39,4 @@ def delete(request):
         user_id = int(request.POST.get('user_id'))
         users = User.objects.get(id=user_id)
         users.delete()
-        return render(request, 'updatepage.html', {'form':form})
-        
+        return HttpResponseRedirect('/mainpage')
