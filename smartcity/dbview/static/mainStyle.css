@@ -101,17 +101,19 @@ margin-right:0px;
 }
 h3{
 	position:relative;
-	top:40px;
-    color:black;
+    color:orange;
 	text-align:center;
 	font-size:600%;
-	font-family:Verdana;
-	vertical-align:center;
-	margin-top:0%;
-	-moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-	}
+	font-family: 'Verdana';
+	sans-serif; 
+	font-size: 54px;
+	font-weight: 300; 
+	line-height: 58px; 
+	background-color: #3F3F5F;
+	width:120%;
+	left:-10%;
+	transform: translate(0, -10px);
+}
 div.map{
 	width:90%;
 	height:30%;

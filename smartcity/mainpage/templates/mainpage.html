@@ -98,8 +98,8 @@ button[type=recommended] {
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
-<div class="city">
-<h3>Welcome to SmartCity </h3></div>
+		<h3>Welcome to SmartCity </h3>
+
  <div id="map" class="map"></div>
 
 <div class="content">
@@ -119,14 +119,37 @@ function initmap() {
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 	var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 16, attribution: osmAttrib});		
 
-	map.setView(new L.LatLng(-27.4772, 153.0278),9);
+	map.setView(new L.LatLng(-27.4772, 153.0278),15);
 	map.addLayer(osm);
 }
 initmap();
   {% for college in colleges %}
 var marker = L.marker([{{college.Lat}}, {{college.Lon}}],{ title:"{{college.name}}"}).addTo(map);
   {% endfor %}
-
+  {% for item in industries %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+  {% for item in hotels %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+  {% for item in parks %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+  {% for item in zoos %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+  {% for item in museums %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+    {% for item in restaurants %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+    {% for item in malls %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
+    {% for item in libraries %}
+var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).addTo(map);
+  {% endfor %}
  </script>
  <br>
 {% if user.is_authenticated %}
