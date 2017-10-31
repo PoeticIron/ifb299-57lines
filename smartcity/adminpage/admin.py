@@ -1,10 +1,14 @@
 from django.contrib import admin
+from dbview.models import *
 
-# Register your models here.
+# Create your views here.
 
-from .models import Author, Genre, Book, BookInstance
-
-admin.site.register(Book)
-admin.site.register(Author)
-admin.site.register(Genre)
-admin.site.register(BookInstance)
+admin.site.register(Colleges)
+admin.site.register(Libraries)
+admin.site.register(Industries)
+admin.site.register(Hotels)
+admin.site.register(Parks)
+admin.site.register(Zoos)
+admin.site.register(Museums)
+admin.site.register(Restaurants)
+admin.site.register(Malls)
