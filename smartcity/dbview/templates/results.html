@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
+
+<style>
+div.content{
+height:initial;
+}
+div.tableheader{
+color:white;
+height:120%;
+font-size:125%;
+text-align: center;
+font-family: Verdana;
+font-weight:bold;
+}
+</style>
 <title>Smart City</title>
 
-<link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
 
 </head>
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
 <div class="content">
-
+<div class="tableheader"> Colleges </div>
 <table style="width:100%">
   <tr>
     <th>College Name</th>
@@ -27,6 +41,7 @@
   </tr>
   {% endfor %}
 </table> 
+<div class="tableheader"> Libraries </div>
 <table style="width:100%">
   <tr>
     <th>Library Name</th>
@@ -43,6 +58,124 @@
   </tr>
   {% endfor %}
 </table> 
-
+<div class="tableheader"> Industries </div>
+<table style="width:100%">
+  <tr>
+    <th>Industry Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in industries %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Hotels </div>
+<table style="width:100%">
+  <tr>
+    <th>Hotel Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in hotels %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Parks </div>
+<table style="width:100%">
+  <tr>
+    <th>Park Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in parks %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Zoos </div>
+<table style="width:100%">
+  <tr>
+    <th>Zoo Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in zoos %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Museums </div>
+<table style="width:100%">
+  <tr>
+    <th>Museum Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in museums %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Restaurants </div>
+<table style="width:100%">
+  <tr>
+    <th>Restaurant Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in restaurants %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
+<div class="tableheader"> Malls </div>
+<table style="width:100%">
+  <tr>
+    <th>Mall Name</th>
+    <th>Address</th>
+    <th>Phone Number</th>
+    <th>Email</th>
+  </tr>
+  {% for item in malls %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.address }}</td>
+    <td>{{ item.phone_number }}</td>
+    <td>{{ item.email }}</td>
+  </tr>
+  {% endfor %}
+</table> 
 </body>
 </html>

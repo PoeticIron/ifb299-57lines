@@ -45,6 +45,36 @@ def search(request):
     if request.method == 'POST':
         term = request.POST.get("term")
         colleges = Colleges.objects.filter(name__icontains=term)
+        industries = Industries.objects.filter(name__icontains=term)
+        hotels = Hotels.objects.filter(name__icontains=term)
+        parks = Parks.objects.filter(name__icontains=term)
+        zoos = Zoos.objects.filter(name__icontains=term)
+        museums = Museums.objects.filter(name__icontains=term)
+        malls = Malls.objects.filter(name__icontains=term)
+        restaurants = Restaurants.objects.filter(name__icontains=term)
         libraries = Libraries.objects.filter(name__icontains=term)
 
-    return render(request, 'results.html', {'colleges': colleges, 'libs': libraries })
+    return render(request, 'results.html', {'colleges': colleges, 'libs': libraries, 'industries':industries, 'hotels':hotels, 'parks':parks, 'zoos':zoos, 'museums':museums,'malls':malls,'restaurants':restaurants,'libraries':libraries	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
