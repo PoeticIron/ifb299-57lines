@@ -9,7 +9,7 @@ class LoginPageView(TemplateView):
         return render(request, 'loginpage.html', context=None)
 def logon(request):
 	if request.method == 'POST':
-		user = authenticate(request, username=request.POST.get("uname"), password=request.POST.get("psw"))
+		user = authenticate(request, username=request.POST.get("username"), password=request.POST.get("psw"))
 		if user is not None:
 			login(request, user)
 			return HttpResponseRedirect('/mainpage')

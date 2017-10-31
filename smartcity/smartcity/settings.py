@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'mainpage',
     'dbview',
 	'itempage',
+	'adminpage',
 )
 
 MIDDLEWARE_CLASSES = (
