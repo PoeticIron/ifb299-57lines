@@ -25,11 +25,13 @@ img[type=city] {
     z-index: -2
 }
 div.city{
-    background-image: url(https://broadwayadvancezh.files.wordpress.com/2016/09/manhattan-wallpaper-41.jpg?w=1400&h=400&crop=1);
+    background-image: url(http://jimmybot.xyz:7777/static/manhattan.jpg);
 	height:400px;
-	margin-top:-3px;
-	width:90%;
-	margin-left:5%;
+	margin-top:-6%;
+	margin-left:-2%;
+	width:104%;
+	margin-left:0%
+	
   background-size: cover;
 }
 
@@ -98,8 +100,12 @@ button[type=recommended] {
 <body>
 {% load staticfiles%}
 {%include 'navbar.html'%}
-		<h3>Welcome to SmartCity </h3>
+<br>
 
+
+<div class="city">
+		<h3>Welcome to SmartCity </h3>
+</div>
  <div id="map" class="map"></div>
 
 <div class="content">
