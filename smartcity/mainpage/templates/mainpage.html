@@ -119,11 +119,14 @@ function initmap() {
 	var osmAttrib='Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors';
 	var osm = new L.TileLayer(osmUrl, {minZoom: 8, maxZoom: 16, attribution: osmAttrib});		
 
-	// start the map in South-East England
 	map.setView(new L.LatLng(-27.4772, 153.0278),9);
 	map.addLayer(osm);
 }
 initmap();
+  {% for college in colleges %}
+var marker = L.marker([{{college.Lat}}, {{college.Lon}}],{ title:"{{college.name}}"}).addTo(map);
+  {% endfor %}
+
  </script>
  <br>
 {% if user.is_authenticated %}
