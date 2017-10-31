@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Smart City</title>
-<link rel="stylesheet" type="text/css" href="http://jimmybot.xyz:7777/static/mainStyle.css">
+<link rel="stylesheet" type="text/css" href="http://127.0.0.1:8000/static/mainStyle.css">
 <style>
 body {
 	background-size: cover;
@@ -73,6 +73,11 @@ input{
 {{ form.as_p }}
 <p>
 <input type="submit" value="Update Details"></p>
+</form>
+<form action="/delete" name ="UpdateFrom" method="post">
+{% csrf_token %}
+<input type="hidden" name="user_id" value="{{user.id}}" />
+<input type="submit" value="Delete Account">
 </form>
 </div></body>
 </html>

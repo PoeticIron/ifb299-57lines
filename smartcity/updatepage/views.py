@@ -21,8 +21,13 @@ def update(request):
 	if request.method == 'POST':
 		form = UpdateForm(request.POST)
 		if form.is_valid():
-			form.save()
-			return redirect('/mainpage')
+			user = request.user
+			user.first_name = request.POST.get("firstname")
+			user.last_name= request.POST.get("lastname")
+			user.email = request.POST.get("email")
+			user.set_password(request.POST.get("password"))
+			user.save()
+			return HttpResponseRedirect('/mainpage')
 	else:
 		form=UpdateForm()
 	return render(request, 'updatepage.html', {'form':form})
