@@ -85,8 +85,12 @@ WSGI_APPLICATION = 'smartcity.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'rango.db',
+        'ENGINE': 'django.db.backends.mysql', 
+        'NAME': 'rango',
+        'USER': 'root',
+        'PASSWORD': 'password',
+        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
