@@ -63,7 +63,8 @@ class Parks(models.Model):
     address = models.CharField(max_length=100)
     phone_number = models.IntegerField()
     email = models.EmailField()
-
+    Lat = models.CharField(max_length=30)
+    Lon = models.CharField(max_length=30)
     def __str__(self):
         return self.name
 

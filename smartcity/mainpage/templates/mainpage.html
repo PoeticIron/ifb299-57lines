@@ -45,8 +45,7 @@ img[type=wood] {
 img[type=university] {
 	display:block;
 	margin:auto;
-	margin-top:22%;
-    width: 200px;
+    width: 100%;
 	text-align:center;
     overflow: hidden;
 }
@@ -54,16 +53,15 @@ img[type=university] {
 
 .contentbox {
 	display:inline-block;
-	height:250px;
-	margin-left:5%;
+	height:25%;
+	margin-left:10%;
     background-color: #EDEDED;
     z-index: -1;
-	width:200px;
+	width:20%;
 }
 
 button[type=colleges] {
-    position: absolute;
-    width:200px;
+    width:100%;
     text-decoration: none;
     color: white;
     font-family: Verdana;
@@ -74,18 +72,23 @@ button[type=colleges] {
     font-size: 20px;
 }
 button[type=recommended] {
-    position: absolute;
-    width:200px;
+    width:100%;
     text-decoration: none;
     color: white;
     font-family: Verdana;
     background-color: #FF8F7F;
-    padding: 14px 20px;
+    padding: 14px 0px;
     border: none;
     cursor: pointer;
     font-size: 20px;
 }
-
+div.content{
+height: initial;
+width:80%;
+}
+h1{
+color:white;
+text-align: center;}
 </style>
 <!-- Leaflet CSS and JS inputs for map -->
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
@@ -106,7 +109,6 @@ button[type=recommended] {
 		<h3>Welcome to SmartCity </h3>
 </div>
  <div id="map" class="map"></div>
-
 <div class="content">
 
  <script>
@@ -162,15 +164,15 @@ var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).add
 {% with user.profile.userType as type %}
 {% if type == 1 %}
 <div class=contentbox>
-  <button onclick="window.location.href='/libraries';" type="colleges">Libraries</button>
+  <button onclick="window.location.href='/libraries';" type="recommended">Libraries</button>
   <img type="university"; src="http://jimmybot.xyz:7777/static/libraries.jpg">
 </div>
 <div class=contentbox>
-  <button onclick="window.location.href='/colleges';" type="colleges">Colleges</button>
+  <button onclick="window.location.href='/colleges';" type="recommended">Colleges</button>
   <img type="university"; src="http://jimmybot.xyz:7777/static/college.jpg">
 </div>
 <div class=contentbox>
-  <button onclick="window.location.href='/park';" type="colleges">Parks</button>
+  <button onclick="window.location.href='/park';" type="recommended">Parks</button>
   <img type="university"; src="http://jimmybot.xyz:7777/static/park.jpg">
 </div>
 {% endif %}
@@ -184,7 +186,7 @@ var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).add
   <img type="university"; src="http://jimmybot.xyz:7777/static/restaurants.jpg">
 </div>
 <div class=contentbox>
-  <button onclick="window.location.href='/museum';" type="colleges">Museums</button>
+  <button onclick="window.location.href='/museum';" type="recommended">Museums</button>
   <img type="university"; src="http://jimmybot.xyz:7777/static/museum.jpg">
 </div>
 {% endif %}
@@ -204,6 +206,7 @@ var marker = L.marker([{{item.Lat}}, {{item.Lon}}],{ title:"{{item.name}}"}).add
 {% endif %}
 {% endwith %}
 {% endif %}
+<h1>Our Data Collections:</h1>
 <br>
 <br>
 <div class=contentbox>
